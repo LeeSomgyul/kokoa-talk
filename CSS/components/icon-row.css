@@ -1,0 +1,15 @@
+.icon-row{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-row__icon{
+    display: flex;/*flex 입력 전에 필수입력*/
+    flex-direction: column;/*축을 가로로 변경하여 이모티콘과 글자가 세로 방향으로 위치하게 만들어준다.*/
+    align-items: center;/*각 div 가운데정렬*/
+}
+.icon-row__icon i {/*icon-row__icon클래스의 i태그에 관해서만 변경*/
+    font-size: 35px;
+}
+.icon-row__icon span{
+    margin-top: 18px;
+}

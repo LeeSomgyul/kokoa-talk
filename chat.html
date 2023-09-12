@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅방</title>
+</head>
+<body id="chat-screen">
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>100%</span>
+            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+    <header class="alt-header">
+       <div class="alt-header__column">
+            <a href="chats.html">
+            <i class="fas fa-angle-left fa-2x"></i>
+            </a>
+       </div>
+       <div class="alt-header__column marginleft-60px">
+            <h1 class="alt-header__title">카카오톡</h1>
+       </div>
+       <div class="alt-header__column">
+            <span><i class="fas fa-search fa-2x"></i></span>
+            <span><i class="fas fa-bars fa-2x"></i></span>
+       </div>
+    </header>
+    <main class="main-screen main-chat screen-margintop-85px"><!--쌤은 chat도 넣으심.. css인데?-->    
+       <div class="chat__timestamp">
+            <span><i class="fas fa-calendar-alt"></i></span>
+            <span>2023년 3월 11일 토요일</span>
+            <span><i class="fas fa-angle-right"></i></span>
+       </div>
+       <div class="message-row message-animation-left-right">
+            <img src="img/카카오톡.jpg"/>
+            <div calss="message-row__content">
+                <span class="message-row__author">카카오톡</span>
+                <div class="message-row__info">
+                    <div class="message-row__bubble">카카오톡 가입을 환영합니다. 새롭게 친구 추가를 하여 대화를 시작해 보세요!</div>
+                    <div class="message-row__time">오후 9:22</div>
+                </div>
+            </div>
+       </div>
+       <div class="message-row message-row--own message-animation-right-left">
+            <div calss="message-row__content">
+                <div class="message-row__info">
+                    <div class="message-row__bubble">친구가 없는데요...</div>
+                     <div class="message-row__time">오후 10:50</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <form class="reply"><!--div도 상관 없음-->
+        <div class="reply__column">
+            <i class="far fa-plus-square fa-2x"></i>
+        </div>
+        <div class="reply__column">
+            <input type="text" placeholder="메세지를 입력하세요."/>
+            <i class="far fa-smile fa-2x"></i>
+            <button>
+                <i class="fas fa-arrow-up fa-lg"></i>
+            </button>
+        </div>
+    </form>
+
+    <div id="no-mobile">
+        <span>화면이 너무 커요ㅠ_ㅠ</span>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/4947cec968.js" crossorigin="anonymous"></script>
+</body>
+</html>

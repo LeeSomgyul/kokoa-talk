@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오톡을 시작합니다</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>100%</span>
+            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">카카오톡을 시작합니다</h1>
+        <p class="welcome-header__text">카카오톡 계정이 있다면 이메일 또는 전화번호를 이용하여 로그인해 주세요.</p>
+    </header>
+    <form action="friend.html" method="get" class="login-form">
+        <input type="text" placeholder="이메일 또는 전화번호"/>
+        <input type="password" placeholder="비밀번호"/>
+        <input type="submit" value="로그인"/>
+        <a href="#">카카오계정 및 비밀번호 찾기</a>
+    </form>
+
+    <div id="no-mobile">
+        <span>화면이 너무 커요ㅠ_ㅠ</span>
+    </div>
+
+    <script src="https://kit.fontawesome.com/4947cec968.js" crossorigin="anonymous"></script>
+</body>
+</html>

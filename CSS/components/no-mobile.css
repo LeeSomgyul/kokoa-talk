@@ -1,0 +1,18 @@
+#no-mobile{
+    position: absolute;/*모든 html의 첫 화면으로 올라가게 함.*/
+    z-index: 99;/*모든 화면 중에서 최상위 위치에 올라오도록 한다.(일부러 큰 숫자로 잡음)*/
+    height: 100vh;/*화면 높이만큼,*/
+    width: 100vw;/*화면 너비만큼 꽉 채운다.*/
+    background-color: rgb(255, 238, 0);
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+@media screen and (max-width:530px) {/*width가 530px보다 작다면(화면 최대가 530px)*/
+    #no-mobile{
+        display: none; /*#no-mobile 화면이 보이지 않는다. 화면이 커지면 위의 display:flex로 실행된다.*/
+    }
+}

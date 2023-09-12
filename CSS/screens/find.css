@@ -1,0 +1,106 @@
+.high-145vh{
+    height: 145vh;
+}
+.recommended-friends{
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin: 25px 0px;
+    padding: 20px 0px;
+}
+.recommended-friends__title{
+    font-size: 15px;
+    color: rgba(0,0,0,0.8);
+}
+.recommended-friends span{
+    display: block;/*span은 inline이라서 block처리를 해주어야 div처럼 블럭이 된다.*/
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+    text-align: center;
+    margin: 90px 0px;
+}
+.open-chat__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: rgba(0,0,0,0.8);
+    margin-bottom: 25px;
+}
+.open-chat__header span {
+    color: rgba(0,0,0,0.8);
+}
+.open-chat__post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.open-chat__post-title{
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.open-chat__post-hashtags{
+    color: rgba(0,0,0,0.6);
+    font-size: 15px;
+}
+.open-chat__post-members{
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+}
+.open-chat__post-members img{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;/*사각형 사진을 원으로 만들기*/
+    margin-right: 5px;
+}
+.open-chat__post-members-count,.open-chat__post-members-status{
+    color: rgba(0,0,0,0.6);
+    font-size: 15px;
+}
+.open-chat__post-members .divider{
+    width: 1.5px;
+    height: 13px;
+    margin: 0px 5px;
+    background-color: rgba(0,0,0,0.4);
+}
+.open-chat__post-photo{
+    position: relative;
+}
+.open-chat__post-photo img{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+}
+.open-chat__post-heart-count{
+    background-color:rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.open-chat__post-heart-count span{
+    font-size: 13px;
+    margin-left: 3px;
+}
+@keyframes heart-beat{
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(2);
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+.open-chat__post-heart-count i{
+    will-change: transform;/*애니메이션이 안정적으로 작동되도록 도와줌. 필수는 아님.*/
+    animation: heart-beat 2s linear infinite;
+}

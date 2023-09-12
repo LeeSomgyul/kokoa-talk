@@ -1,0 +1,30 @@
+.screen-header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px;
+    align-items: center;/*아이콘들을 친구와 같은 높이로(축맞춤)*/
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+}
+.screen-header__title{
+    font-size: 30px;
+    font-weight: 600;
+}
+.screen-header__icons span{
+    position: relative;
+    margin-left: 15px;
+}
+@keyframes rotate-cog{
+    from{
+        transform: none;
+    }
+    to{
+        transform: rotateZ(360deg);/*제자리에서 회전은 z축*/
+    }
+}
+.screen-header__icons .fa-cog:hover{/*hover(마우스 올렸을때만 애니메이션 적용)*/
+    /*header의 환경설정(fa-cog)아이콘만 돌아가도록 애니메이션 적용하기*/
+    animation: rotate-cog 2s linear infinite;/*linear(ease-in-out와 차이 확인해보기)*/
+}

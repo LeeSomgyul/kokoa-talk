@@ -1,0 +1,38 @@
+@import "reset.css";
+
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+@import "screens/login.css";
+@import "screens/friend.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+@font-face { /*폰트사용 1번 : 무료폰트 사이트 들어가서 복사*/
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{font-family: 'SUIT-Regular'; /*폰트사용 2번 : 위의 font-family 복붙*/
+}
+.main-screen{
+    padding: 0px 17px;
+}
+.screen-margintop-85px{
+    margin-top: 85px;
+}
+.screen-margintop-60px{
+    margin-top: 60px;
+}
+.background-white{
+    background-color: white;
+}

@@ -1,0 +1,172 @@
+.marginleft-60px{
+    margin-left: 60px;
+}
+#chat-screen{
+    background-color: #abc1d1;
+    height: 500vh;
+}
+#chat-screen .status-bar,.alt-header{
+    background-color: #abc1d1;
+}
+.chat__timestamp{
+    color: white;
+    background-color: #92a4b2;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+.main-chat{
+    display: flex; /*날짜 박스를 글자 크기에 맞춰 조절한 뒤*/
+    flex-direction: column;/*main-chat클래스의 축을 가로>세로로 변경해 주고*/
+    align-items: center;/*가운데정렬한다.*/
+}
+.message-row{
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+.message-row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 35%;
+    margin-right: 10px;
+    border: solid 1px rgb(192, 188, 188)
+}
+.message-row__author{
+    color: rgba(0,0,0,0.6);
+    font-size: 16px;
+    display: block;/*위 클래스는 span이기 때문에 블럭으로 만들어야 margin이 적용된다.*/
+    margin-bottom: 8px;
+}
+@keyframes message-left-right{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+.message-animation-left-right{
+    animation: message-left-right 1s linear;
+}
+@keyframes message-right-left{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+.message-animation-right-left{
+    animation: message-right-left 1s linear;
+}
+.message-row__info{
+    display: flex;
+    align-items: flex-end;/*시간을 하단으로 오게 하기*/
+}
+.message-row__bubble{
+    width: 280px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;/*말풍선의 한쪽 모서리만 각지게 적용*/
+    margin-right: 10px;
+    line-height: 20px;
+}
+.message-row__time{
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+.message-row--own{
+    justify-content: flex-end; /*말풍선 맨 오른쪽으로 이동*/
+}
+.message-row--own .message-row__bubble{
+    /*nessage-row-own 안에 있는 bubble 클래스만 지정
+    다른 bubbl 클래스도 지정되면 안되기 때문.*/
+    background-color: rgb(255, 238, 0);
+    width: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+.message-row--own .message-row__info{
+    flex-direction: row-reverse; /*말풍선과 시간 순서를 바꿔준다. (이미 display:flex는 message-row에서 해줌)*/
+}
+.reply{
+    position: fixed;
+    bottom: 0; /*맨 아래에 고정*/
+    width: 100%; /*채팅창 너비를 꽉차게*/
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;/*맨 아래에 있는 reply:focus의 transform을 부드럽게 적용해준다.*/
+}
+
+.reply .reply__column:first-child{/*1.input에 너비를 지정하기 위해서는 column자체에 너비지정 후 설정해야 한다.*/
+    width: 10%;
+}
+.reply .reply__column:last-child{/*2.input에 너비를 지정하기 위해서는 column자체에 너비지정 후 설정해야 한다.*/
+    width: 90%;
+    position: relative;/*i와 button absolute의 부모클래스*/
+}
+.reply input{
+    height: 40px;
+    width: 98%;/*3.column너비지정 후 input너비 지정하기*/
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding-left: 15px;
+    transition: all 0.3s ease-in-out;
+    /*transition이 없다면 reply:focus가 부드럽게 움직이지 않는다.*/
+}
+.reply__column:last-child > i,/*>기호는 '직속선택자' 이다.*/
+.reply__column:last-child button{
+    position: absolute;
+    right: 0px;
+    top: 4px 
+}
+.reply__column:last-child > i{ /*>기호는 '직속선택자' 이다.*/
+    right: 40px;
+    top: 6px;
+    color: rgba(0,0,0,0.4);
+}
+.reply__column button {
+    background-color: rgb(255, 238, 0);
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+}
+.reply__column button:focus,/*text창을 클릭했을때(효과1),*/
+.reply__column button:active{/*text창을 클릭했을때(효과2),*/
+    outline: none;/*아무 효과도 주지 않는다.*/
+}
+.reply__column:first-child > i{
+    color: rgba(0,0,0,0.4);
+}
+/*아래는 애니메이션*/
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+    transition: opacity 0.3s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+    opacity: 0;
+}
+.reply input:focus{
+    width:86vw;
+    transform: translateX(-10%) translateY(-80px);
+}
+.reply:focus-within{
+    transform: translateY(80px);
+}

@@ -1,0 +1,28 @@
+.status-bar{
+    display: flex;
+    /*justify-content: space-between;로 해도 되지만 18:43을 중앙으로 하기 위해 hack 사용(사람들이 되길래 서로 공유하는것임..)*/
+    justify-content: center; /*hack사용 1번*/
+    padding: 5px;
+    position: sticky;/*1.위치를 고정한다*/
+    top: 0;/*2.맨위에*/
+    width: 100%;/*3.너비는 100으로 하여 전체를 사용하고*/
+    box-sizing: border-box;/*4.박스 크기는 늘리지 말것*/
+}
+.status-bar__column{
+    width: 33%; /*hack사용 2번*/
+}
+.status-bar__column:first-child span{
+    margin-right: 3px;
+}
+.status-bar__column:nth-child(2){  /*hack사용 3번*/
+    display: flex;
+    justify-content: center;
+}
+.status-bar__column:last-child{
+    display: flex;
+    justify-content: end;
+    align-items: center;/*100%와 아이콘이 몰려있어서 가운데정렬.(박스 안에서 가운데정렬 해준다.*/
+}
+.fa-battery-full{ /*참고)선생님은 .status-bar__colum도 같이 해줬음*/
+    margin: 3px;
+}

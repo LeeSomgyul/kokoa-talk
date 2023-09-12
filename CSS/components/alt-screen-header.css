@@ -1,0 +1,23 @@
+.alt-header{
+    padding: 17px;
+    margin-bottom: 15px;
+    display: flex;
+    position: fixed;
+    margin: 0 auto;/*position:fixed상태에서 가운데정렬 방법 1번*/
+    left: 0; /*2번*/
+    right: 0; /*3번*/
+    align-items: center;
+}
+.alt-header__title{
+    font-size: 25px;
+    font-weight: 550;
+}
+.alt-header__column:first-child{/*'설정'을 가운데로 오게 하는 방법 1번*/
+    margin-right: auto;
+}
+.alt-header__column:last-child{/*2번*/
+    margin-left: auto;
+}
+.alt-header__column span:last-child{
+    margin-left: 20px;
+}

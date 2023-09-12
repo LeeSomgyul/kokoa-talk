@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설정</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>100%</span>
+            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+    <header class="alt-header background-white">
+       <div class="alt-header__column">
+            <a href="javascript:history.back();">
+            <i class="fas fa-angle-left fa-2x"></i>
+            </a>
+       </div>
+       <div class="alt-header__column">
+            <h1 class="alt-header__title">설정</h1>
+       </div>
+       <div class="alt-header__column">
+            <i class="fas fa-search fa-2x"></i>
+       </div>
+    </header>
+    <main class="main-screen screen-margintop-60px">    
+       <ul class="settings-list">
+            <li class="settings__setting"><!--div개수:아이콘,이름 1세트/우측내용1세트-->
+                <div class="settings__setting-column">
+                    <i class="fas fa-user-lock"></i>
+                    <span>카카오계정</span>
+                </div>
+                <div class="settings__setting-column">
+                    myemail@kakao.com
+                </div>
+            </li>
+            <li class="settings__setting">
+                <div class="settings__setting-column">
+                    <i class="fas fa-lock"></i>
+                    <span>개인/보안</span>
+                </div>
+            </li>
+            <li class="settings__setting">
+                <div class="settings__setting-column">
+                    <i class="fas fa-users"></i>
+                    <span>친구</span>
+                </div>
+            </li>
+            <li class="settings__setting">
+                <div class="settings__setting-column">
+                    <i class="fas fa-brush"></i>
+                    <span>테마</span>
+                    <span class="user-component__phonenumber-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                </div>
+                <div class="settings__setting-column">
+                    시스템 설정 모드
+                </div>
+            </li>
+            <li class="settings__setting">
+                <div class="settings__setting-column">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>통화</span>
+                </div>
+            </li>
+       </ul>
+    </main>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friend.html">
+                    <i class="far fa-user fa-2x"></i>
+                </a>
+             </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__notification badge">1</span>
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html">
+                    <i class="fas fa-search-plus fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav__dots"></span>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="no-mobile">
+        <span>화면이 너무 커요ㅠ_ㅠ</span>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/4947cec968.js" crossorigin="anonymous"></script>
+</body>
+</html>

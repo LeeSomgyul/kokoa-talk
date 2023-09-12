@@ -1,0 +1,48 @@
+.friend-display{
+    margin-top: 65px;
+    text-align: center;
+}
+.friend-display__link{
+    display: block;
+    background-color: #fafafa;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.friend-display__link i{
+    padding: 0px 8px;
+    color: rgb(181, 181, 181);
+}
+.friend-screen__channel{
+    margin-top: 25px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding-top: 12px;
+}
+.friend-screen__channel--header{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0,0, 0, 0.6);
+}
+@keyframes hide-splash-screen{/*애니메이션 만들기 (@keyframes 애니메이션이름 지정)*/
+    from{/*애니메이션 시작은 불투명도1*/
+        opacity: 1;
+    }
+    to{/*애니메이션 끝은 불투명도0*/
+        opacity: 0;
+        visibility: hidden;/*애니메이션이 끝나도 불투명도가 0일 뿐이지 보여지고 있는것이기 때문에 화면이 클릭되지 않는다. 클릭을 위해선 javascript가 필요하기 때문에 임시조치로 애니메이션을 무시하는 위 명령을 사용하였다.*/
+    }
+}
+.splash-screen{
+    background-color: rgb(255, 238, 0);
+    position: absolute;/*부모 클래스에 relative를 입력해야 하지만 body맨 위에 보일것이기 때문에 작성하지 않아도 된다.*/
+    height: 100vh;/*화면 높이의 전체 자치*/
+    width: 100vw;/*화면 너비의 전체 차지*/
+    top : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    animation: hide-splash-screen 0.5s ease-in-out forwards;/*ease-in-out만 지정하면 다시 애니메이션이 되돌아돈다. forwards를 통해 애니메이션의 마지막을 유지시키는 것이다.*/
+    animation-delay: 1.5s;/*애니메이션 from 시간을 늘려줌*/
+}
